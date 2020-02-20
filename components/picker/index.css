@@ -13,20 +13,20 @@ governing permissions and limitations under the License.
 @import '../commons/index.css';
 
 :root {
-  --spectrum-dropdown-popover-max-width: var(--spectrum-global-dimension-size-3000);
-  --spectrum-dropdown-width: var(--spectrum-global-dimension-size-2400);
+  --spectrum-picker-popover-max-width: var(--spectrum-global-dimension-size-3000);
+  --spectrum-picker-width: var(--spectrum-global-dimension-size-2400);
 
   /* This needs to be a variable so it overrides when using multiStops */
-  --spectrum-dropdown-quiet-width: auto;
+  --spectrum-picker-quiet-width: auto;
 }
 
-.spectrum-Dropdown {
+.spectrum-Picker {
   position: relative;
   display: inline-block;
 
   /* Truncate if menu options make us too wide */
   max-inline-size: 100%;
-  inline-size: var(--spectrum-dropdown-width);
+  inline-size: var(--spectrum-picker-width);
   min-inline-size: var(--spectrum-dropdown-min-width);
 
   /* Hack to enable select-powered Dropdowns */
@@ -42,7 +42,7 @@ governing permissions and limitations under the License.
       background-color: transparent;
     }
 
-    & + .spectrum-Dropdown-icon {
+    & + .spectrum-Picker-icon {
       position: absolute;
       inset-inline-end: var(--spectrum-dropdown-padding-x);
       inset-block-start: 50%;
@@ -51,7 +51,7 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Dropdown-trigger {
+.spectrum-Picker-trigger {
   position: relative;
   inline-size: 100%;
   display: flex;
@@ -59,7 +59,7 @@ governing permissions and limitations under the License.
   align-items: center;
 }
 
-.spectrum-Dropdown-label {
+.spectrum-Picker-label {
   /* Be the biggest, but also shrink! */
   flex: 1 1 auto;
 
@@ -82,20 +82,20 @@ governing permissions and limitations under the License.
 }
 
 /* Only apply margin to the icon if there's a label */
-.spectrum-Dropdown-label + .spectrum-Dropdown-icon {
+.spectrum-Picker-label + .spectrum-Picker-icon {
   margin-inline-start: var(--spectrum-dropdown-icon-margin-left);
 }
 
-.spectrum-Icon + .spectrum-Dropdown-label {
+.spectrum-Icon + .spectrum-Picker-label {
   margin-inline-start: var(--spectrum-selectlist-thumbnail-image-padding-x);
 }
 
 /* Only apply margin if there's a label */
-.spectrum-Dropdown-label ~ .spectrum-Dropdown-icon {
+.spectrum-Picker-label ~ .spectrum-Picker-icon {
   margin-inline-start: var(--spectrum-dropdown-icon-margin-left);
 }
 
-.spectrum-Dropdown-icon {
+.spectrum-Picker-icon {
   display: inline-block;
   position: relative;
   vertical-align: top;
@@ -109,31 +109,31 @@ governing permissions and limitations under the License.
 }
 
 /* Error icons */
-.spectrum-Dropdown-trigger {
-  .spectrum-Icon:not(.spectrum-Dropdown-icon) {
+.spectrum-Picker-trigger {
+  .spectrum-Icon:not(.spectrum-Picker-icon) {
     /* Fix Safari 10 bug where align-items is ignored inside of buttons */
   margin-block-start: calc(calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2) - var(--spectrum-dropdown-icon-size)) / 2);
     margin-block-end: calc(calc(var(--spectrum-dropdown-height) - calc(var(--spectrum-dropdown-border-size) * 2) - var(--spectrum-dropdown-icon-size)) / 2);
   }
 
-  .spectrum-Dropdown-label + .spectrum-Icon:not(.spectrum-Dropdown-icon) {
+  .spectrum-Picker-label + .spectrum-Icon:not(.spectrum-Picker-icon) {
     margin-inline-start: var(--spectrum-dropdown-icon-margin-left);
   }
 }
 
-.spectrum-Icon + .spectrum-Dropdown-icon {
+.spectrum-Icon + .spectrum-Picker-icon {
   margin-inline-start: var(--spectrum-dropdown-icon-gap);
 }
 
-.spectrum-Dropdown--quiet {
-  inline-size: var(--spectrum-dropdown-quiet-width);
+.spectrum-Picker--quiet {
+  inline-size: var(--spectrum-picker-quiet-width);
   min-inline-size: var(--spectrum-dropdown-quiet-min-width);
 }
 
-.spectrum-Dropdown-popover {
-  max-inline-size: var(--spectrum-dropdown-popover-max-width);
+.spectrum-Picker-popover {
+  max-inline-size: var(--spectrum-picker-popover-max-width);
 }
 
-.spectrum-Dropdown-popover--quiet {
+.spectrum-Picker-popover--quiet {
   margin-inline-start: calc(-1 * calc(var(--spectrum-dropdown-quiet-popover-offset-x) + var(--spectrum-popover-border-size)));
 }

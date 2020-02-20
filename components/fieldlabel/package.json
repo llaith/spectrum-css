@@ -22,7 +22,7 @@
   "devDependencies": {
     "@spectrum-css/checkbox": "^2.0.5",
     "@spectrum-css/component-builder": "^1.1.0",
-    "@spectrum-css/dropdown": "^2.1.4",
+    "@spectrum-css/picker": "^2.1.4",
     "@spectrum-css/icon": "^2.0.4",
     "@spectrum-css/radio": "^2.0.5",
     "@spectrum-css/stepper": "^2.0.5",

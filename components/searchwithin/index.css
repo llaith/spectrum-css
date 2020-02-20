@@ -25,17 +25,17 @@ governing permissions and limitations under the License.
   display: inline-flex;
   position: relative;
 
-  .spectrum-Dropdown {
+  .spectrum-Picker {
     inline-size: auto;
     min-inline-size: 0;
   }
 
-  .spectrum-Dropdown-trigger {
+  .spectrum-Picker-trigger {
     border-start-end-radius: var(--spectrum-searchwithin-border-radius);
     border-end-end-radius: var(--spectrum-searchwithin-border-radius);
   }
 
-  .spectrum-Dropdown-label {
+  .spectrum-Picker-label {
     /* Override dropdown's min-width and be tiny */
     min-inline-size: var(--spectrum-searchwithin-dropdown-min-width);
   }
